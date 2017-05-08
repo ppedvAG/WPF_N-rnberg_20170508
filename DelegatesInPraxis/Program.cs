@@ -1,32 +1,63 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DelegatesInPraxis
 {
+    public delegate bool MyDelegate(Employee e);
+    // Action       -> void
+    // Predicate<>  -> bool
+    // Func
+
     class Program
     {
         static void Main(string[] args)
         {
             var employees = GetData();
 
-            var query = Abfrage(employees, 5);
+            //MyDelegate del = new MyDelegate(Bedingung);
+            //Func<Employee, bool> del = new Func<Employee, bool>(Bedingung);
+            //var del = new Func<Employee, bool>(Bedingung);
+            //Func<Employee, bool> del = Bedingung;
+            //var query = Abfrage(employees, del);
+
+            //var query = Abfrage(employees, Bedingung);
+
+            //var query = Abfrage(employees, delegate (Employee e)
+            //{
+            //    return e.Id < 5;
+            //});
+
+            //var query = Abfrage(employees, (e) =>
+            //{
+            //    return e.Id < 5;
+            //});
+
+            //var query = Abfrage(employees, (e) => e.Id < 5);
+            var query = employees.Abfrage(e => e.Id < 5);
+            var linqQuery = employees.Where(e => e.Experience > 10);
+            var linqQuery1 = from e in employees
+                             where e.Experience > 10
+                             select e;
 
             foreach (var e in query)
             {
                 Console.WriteLine($"{e.Id} - {e.Name, 10} - {e.Experience}");
             }
+
+            var namen = new[] { "Franz", "Luis", "Sepp" };
+            var gefiltert = MyExtentions.Abfrage(namen, n => n.StartsWith("L"));
+            var gefiltert2 = namen.Abfrage(n => n.StartsWith("L"));
+
+
             Console.ReadKey();
         }
 
-        private static IEnumerable<Employee> Abfrage(
-            IEnumerable<Employee> employees,
-            int expreience)
+        private static bool Bedingung(Employee e)
         {
-            foreach (var e in employees)
-                if (e.Experience < expreience)
-                    yield return e;
+            return e.Name.Contains("z");
         }
-
+        
         private static IEnumerable<Employee> GetData()
         {
             return new List<Employee>
@@ -41,6 +72,18 @@ namespace DelegatesInPraxis
                 new Employee { Id = 8, Name = "Sepp", Experience = 10 },
                 new Employee { Id = 9, Name = "Alexandra", Experience = 8 },
             };
+        }
+    }
+
+    public static class MyExtentions
+    {
+        public static IEnumerable<T> Abfrage<T>(
+            this IEnumerable<T> collection,
+            Func<T, bool> predicate)
+        {
+            foreach (var c in collection)
+                if (predicate(c))
+                    yield return c;
         }
     }
 }
