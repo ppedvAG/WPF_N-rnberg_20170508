@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalloDelegates", "HalloDele
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesInPraxis", "DelegatesInPraxis\DelegatesInPraxis.csproj", "{7CDDBA32-3DE5-4EE3-8A52-3BB64D7C741D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalloWPF", "HalloWPF\HalloWPF.csproj", "{FA571991-739C-41D2-886F-B891ED20D9D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayoutÜbung", "LayoutÜbung\LayoutÜbung.csproj", "{453D3723-66F8-446D-B4B9-4C5C3C705976}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{7CDDBA32-3DE5-4EE3-8A52-3BB64D7C741D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CDDBA32-3DE5-4EE3-8A52-3BB64D7C741D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CDDBA32-3DE5-4EE3-8A52-3BB64D7C741D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA571991-739C-41D2-886F-B891ED20D9D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA571991-739C-41D2-886F-B891ED20D9D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA571991-739C-41D2-886F-B891ED20D9D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA571991-739C-41D2-886F-B891ED20D9D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{453D3723-66F8-446D-B4B9-4C5C3C705976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{453D3723-66F8-446D-B4B9-4C5C3C705976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{453D3723-66F8-446D-B4B9-4C5C3C705976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{453D3723-66F8-446D-B4B9-4C5C3C705976}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

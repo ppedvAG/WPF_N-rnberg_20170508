@@ -1,0 +1,106 @@
+﻿<Window x:Class="HalloWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HalloWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" MinWidth="350">
+    <!-- Canvas -->
+    <!--<Canvas>
+        <Rectangle Canvas.Top="10" Canvas.Left="200"
+                   Canvas.ZIndex="1"
+                   Height="80" Width="100" Fill=" Red" />
+
+        <Ellipse Height="70" Width="70" Fill="Blue"
+                 Canvas.Left="180" Canvas.Top="50" />
+    </Canvas>-->
+    <!-- StackPanel -->
+    <!--<StackPanel Orientation="Horizontal">
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+    </StackPanel>-->
+    <!-- WrapPanel -->
+    <!--<WrapPanel Orientation="Horizontal" >
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+    </WrapPanel>-->
+    <!-- ScrollViewer -->
+    <!--<ScrollViewer VerticalScrollBarVisibility="Hidden">
+        <StackPanel>
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+        </StackPanel>
+    </ScrollViewer>-->
+    <!-- DockPanel -->
+    <!--<DockPanel LastChildFill="False" >
+        <Button Content="Click Me!" DockPanel.Dock="Top" />
+        <Button Content="Click Me!" DockPanel.Dock="Left" />
+        <Button Content="Click Me!" DockPanel.Dock="Left" />
+        <Button Content="Click Me!" DockPanel.Dock="Right" />
+        <Button Content="Click Me!" DockPanel.Dock="Bottom" />
+    </DockPanel>-->
+    <!-- Border -->
+    <!--<Border Margin="50"
+            BorderBrush="BlueViolet"
+            BorderThickness="5"
+            CornerRadius="25">
+        <StackPanel Margin="25 ">
+            <Button Content="Hi" />
+        </StackPanel>
+    </Border>-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <Button Grid.Row="0" Content="Click me" />
+        <Rectangle Grid.Row="1" Fill="Blue" />
+        <Rectangle Grid.Row="2" Fill="Gainsboro" />
+        <Rectangle Grid.Row="3" Fill="Yellow" />
+
+        <Rectangle Grid.Row="4" Fill="Orange" />
+        <TextBlock Text="Statusbar" 
+                   Grid.Row="4" 
+                   HorizontalAlignment="Center"/>
+    </Grid>
+</Window>
