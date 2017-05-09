@@ -1,0 +1,47 @@
+﻿<Window x:Class="Resources.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Resources"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        >
+    <Window.Resources>
+        <SolidColorBrush x:Key="defaultBackgroundColor" Color="Orange" />
+
+        <system:Double x:Key="defaultButtonWidth">180</system:Double>
+    </Window.Resources>
+    
+    <StackPanel Margin="50" Background="{DynamicResource defaultBackgroundColor}">
+        <Button Content="Change Color" 
+                Background="{StaticResource defaultBackgroundColor}"
+                Width="{StaticResource defaultButtonWidth}"
+                Click="ChangeColorButton_Click"/>
+        
+        <Button Content="Change Instance" 
+                Background="{StaticResource defaultBackgroundColor}"
+                Click="ChangeInstanceButton_Click"/>
+        
+        <Button Content="Change Type"
+                Background="{DynamicResource defaultBackgroundColor}"
+                Click="ChangeTypeButton_Click"/>
+        
+        <Button Content="Click Me!" />
+        
+        <StackPanel Margin="0 20 0 0">
+            <StackPanel.Resources>
+                <SolidColorBrush x:Key="defaultBackgroundColor" Color="GreenYellow" />
+            </StackPanel.Resources>
+            
+            <Button Content="Click Me!" 
+                    Background="{StaticResource defaultBackgroundColor}"/>
+            <Button Content="Click Me!" />
+        </StackPanel>
+
+        <Button Content="Click Me!" 
+                Background="{StaticResource defaultBackgroundColor}"
+                Margin="0 20 0 0"/>
+    </StackPanel>
+</Window>
