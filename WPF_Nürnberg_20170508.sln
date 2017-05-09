@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Styles", "Styles\Styles.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlTemplates", "ControlTemplates\ControlTemplates.csproj", "{88B6AD0B-E71D-4C89-876E-9728B6415F0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding", "Binding\Binding.csproj", "{48C2A806-C801-45BC-A417-854E8E33B50C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{88B6AD0B-E71D-4C89-876E-9728B6415F0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88B6AD0B-E71D-4C89-876E-9728B6415F0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88B6AD0B-E71D-4C89-876E-9728B6415F0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48C2A806-C801-45BC-A417-854E8E33B50C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48C2A806-C801-45BC-A417-854E8E33B50C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48C2A806-C801-45BC-A417-854E8E33B50C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48C2A806-C801-45BC-A417-854E8E33B50C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
