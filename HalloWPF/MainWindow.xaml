@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HalloWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" MinWidth="350">
+        Title="MainWindow" Height="350"  Width="525" MinWidth="350">
     <!-- Canvas -->
     <!--<Canvas>
         <Rectangle Canvas.Top="10" Canvas.Left="200"
@@ -84,7 +84,8 @@
             <Button Content="Hi" />
         </StackPanel>
     </Border>-->
-    <Grid>
+    <!-- Grid -->
+    <!--<Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="100" />
@@ -102,5 +103,56 @@
         <TextBlock Text="Statusbar" 
                    Grid.Row="4" 
                    HorizontalAlignment="Center"/>
-    </Grid>
+    </Grid>-->
+
+    <StackPanel Margin="50" >
+
+        <!--<Image Source="lorempixel.jpg"
+               Stretch="UniformToFill"/>-->
+
+        <CheckBox IsChecked="{x:Null}" Content="Check me" />
+        <CheckBox IsChecked="{x:Null}" Content="Check me" />
+        <CheckBox IsChecked="{x:Null}" Content="Check me" />
+        <CheckBox IsChecked="{x:Null}" Content="Check me" />
+
+        <RadioButton Content="Check me too" Margin="0 8 0 0"/>
+        <RadioButton Content="Check me too" />
+        <RadioButton Content="Check me too" />
+        <StackPanel>
+            <RadioButton Content="Check me too" />
+            <RadioButton Content="Check me too" />
+        </StackPanel>
+
+        <Slider Orientation="Horizontal"
+                Minimum="0" Maximum="100"
+                Value="50"
+                TickFrequency="10"
+                TickPlacement="Both"
+                IsSnapToTickEnabled="True"/>
+
+        <ProgressBar Margin="0 8 0 0"
+                     Orientation="Horizontal"
+                     Minimum="0" Maximum="100"
+                     Value="50" 
+                     Height="20"
+                     IsIndeterminate="False"/>
+
+        <Menu Margin="0 8 0 0" >
+            <MenuItem Header="Datei">
+                <MenuItem Header="Speichern" />
+                <Separator />
+                <MenuItem Command="Print" />
+                <Separator />
+                <MenuItem Header="Beenden" />
+            </MenuItem>
+            <MenuItem Header="Bearbeiten">
+                <MenuItem Header="Mein neuer Name fürs Kopieren" Command="Copy" />
+                <MenuItem Command="Cut" />
+                <MenuItem Command="Paste" />
+            </MenuItem>
+        </Menu>
+
+        <TextBox Margin="0 20 0 0"/>
+
+    </StackPanel>
 </Window>
