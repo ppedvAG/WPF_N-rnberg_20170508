@@ -1,0 +1,51 @@
+﻿<Window x:Class="RelativeSourcePreviousData.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RelativeSourcePreviousData"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <ItemsControl Grid.IsSharedSizeScope="True" Name="dataItemsControl">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid  Margin="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35" />
+                            <ColumnDefinition SharedSizeGroup="meinFreiDefinierterEindeutigerName" Width="{Binding Value}" />
+                            <ColumnDefinition SharedSizeGroup="meinAndererFreiDefinierterEindeutigerName" Width="{Binding Value}" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <!-- Vorherige Daten -->
+                        <TextBlock VerticalAlignment="Center"
+                                   Text="{Binding RelativeSource={RelativeSource PreviousData}, Path=Value}" />
+
+
+                        <Rectangle Grid.Column="1" Fill="Red"
+                                   Width="{Binding Value}"/>
+                        
+                        <Rectangle Grid.Column="2" Fill="Green"
+                                   Width="{Binding Value}"/>
+
+
+                        <!-- Aktuelle Daten -->
+                        <Border Grid.Column="3"
+                                HorizontalAlignment="Left"
+                                BorderBrush="Blue"
+                                BorderThickness="2" CornerRadius="3"
+                                Background="LightBlue"
+                                Height="35"
+                                Width="{Binding Value}">
+                            <TextBlock Text="{Binding Value}" 
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center" />
+                        </Border>
+                        
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</Window>
