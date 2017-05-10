@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiConverters", "MultiCon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyTrigger", "PropertyTrigger\PropertyTrigger.csproj", "{CDB8C64C-4393-4AD0-9D95-574597C39C67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTrigger", "DataTrigger\DataTrigger.csproj", "{B3E1CE61-7815-43A9-9EA1-FC7C5B18B2E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{CDB8C64C-4393-4AD0-9D95-574597C39C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDB8C64C-4393-4AD0-9D95-574597C39C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDB8C64C-4393-4AD0-9D95-574597C39C67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3E1CE61-7815-43A9-9EA1-FC7C5B18B2E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3E1CE61-7815-43A9-9EA1-FC7C5B18B2E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3E1CE61-7815-43A9-9EA1-FC7C5B18B2E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3E1CE61-7815-43A9-9EA1-FC7C5B18B2E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

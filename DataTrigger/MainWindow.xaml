@@ -1,0 +1,60 @@
+﻿<Window x:Class="DataTrigger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataTrigger"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="4" />
+
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Value="Rot">
+                    <Setter Property="Background" Value="Red" />
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Value="Gelb">
+                    <Setter Property="Background" Value="Yellow" />
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding ElementName=SizeToggleButton, Path=IsChecked}" Value="False">
+                    <Setter Property="Width" Value="180" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <StackPanel Margin="50">
+        <TextBox />
+        <TextBox />
+        <TextBox />
+        <TextBox />
+
+        <ToggleButton Margin="0 20 0 0" 
+                      Name="SizeToggleButton">
+            <ToggleButton.Style>
+                <Style TargetType="ToggleButton">
+                    <Setter Property="Content" Value="Groß" />
+                    <Setter Property="FontSize" Value="24" />
+                    <Setter Property="FontWeight" Value="Bold" />
+
+                    <Style.Triggers>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter Property="Content" Value="Klein" />
+                            <Setter Property="FontSize" Value="11" />
+                            <Setter Property="FontWeight" Value="ExtraLight" />
+                        </Trigger>
+
+                        <!--<DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsChecked}" Value="False">
+                            <Setter Property="Content" Value="Klein" />
+                            <Setter Property="FontSize" Value="11" />
+                            <Setter Property="FontWeight" Value="ExtraLight" />
+                        </DataTrigger>-->
+                    </Style.Triggers>
+                </Style>
+            </ToggleButton.Style>
+        </ToggleButton>
+    </StackPanel>
+</Window>
