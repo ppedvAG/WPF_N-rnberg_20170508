@@ -5,7 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Binding"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="450" Width="525">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="myBrushKey" x:Name="myBrushName" Color="Orange" />
+    </Window.Resources>
     
     <StackPanel Margin="50">
         <Slider Name="mySlider" Minimum="0" Maximum="250" />
@@ -26,7 +30,7 @@
                  Text="{Binding ElementName=mySlider, Path=Value, StringFormat=0.00,
                                 UpdateSourceTrigger=PropertyChanged, Delay=200, Mode=TwoWay}"/>
 
-        <TextBox Name="ColorTextBox" 
+        <TextBox Name="ColorTextBox"         
                  Text="Black"
                  Margin="0 20 0 0" 
                  HorizontalContentAlignment="Center" />
@@ -36,5 +40,17 @@
                    Width="{Binding ElementName=mySlider, Path=Value}"
                    Fill="{Binding ElementName=ColorTextBox, Path=Text}"
                    HorizontalAlignment="Center"/>
+
+        <TextBlock Margin="0 20 0 0">
+            <TextBlock.Text>
+                <Binding Path="Color">
+                    <Binding.Source>
+                        <SolidColorBrush Color="Black" />
+                    </Binding.Source>
+                </Binding>
+            </TextBlock.Text>
+        </TextBlock>
+        <TextBlock Margin="0 4 0 0" Text="{Binding Source={StaticResource myBrushKey}, Path=Color.R}" />
+        <TextBlock Margin="0 4 0 0" Text="{Binding ElementName=myBrushName, Path=Color.R}" />
     </StackPanel>
 </Window>

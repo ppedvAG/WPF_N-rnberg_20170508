@@ -9,7 +9,7 @@
 
     <Window.Resources>
         <ControlTemplate x:Key="myButtonTemplate"
-                         TargetType="Button">
+                         TargetType="{x:Type Button}">
             <Grid Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
                 <Ellipse Fill="#FFDAE99E" />
                 <ContentPresenter Content="{TemplateBinding Content}" 

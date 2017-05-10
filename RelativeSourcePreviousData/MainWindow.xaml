@@ -12,9 +12,12 @@
                 <DataTemplate>
                     <Grid  Margin="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="35" />
-                            <ColumnDefinition SharedSizeGroup="meinFreiDefinierterEindeutigerName" Width="{Binding Value}" />
-                            <ColumnDefinition SharedSizeGroup="meinAndererFreiDefinierterEindeutigerName" Width="{Binding Value}" />
+                            <ColumnDefinition Width="Auto"
+                                              SharedSizeGroup="col1"/>
+                            <ColumnDefinition SharedSizeGroup="meinFreiDefinierterEindeutigerName" 
+                                              Width="{Binding Value}" />
+                            <ColumnDefinition SharedSizeGroup="meinAndererFreiDefinierterEindeutigerName" 
+                                              Width="{Binding Value}" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         
@@ -37,7 +40,7 @@
                                 BorderThickness="2" CornerRadius="3"
                                 Background="LightBlue"
                                 Height="35"
-                                Width="{Binding Value}">
+                                Width="{Binding Path=Value}">
                             <TextBlock Text="{Binding Value}" 
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center" />

@@ -17,7 +17,8 @@
                               Width="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Width}">
                             <Ellipse Fill="{TemplateBinding Background}" />
                             <ContentPresenter HorizontalAlignment="Center"
-                                              VerticalAlignment="Center" />
+                                              VerticalAlignment="Center"
+                                              Content="{TemplateBinding Content}"/>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
