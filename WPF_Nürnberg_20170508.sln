@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelativeSourceFindAncestor"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelativeSourcePreviousData", "RelativeSourcePreviousData\RelativeSourcePreviousData.csproj", "{40EB30CF-A980-4DC0-9B2A-7751EE790112}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertersExample", "ConvertersExample\ConvertersExample.csproj", "{2BD8D3F4-1F1D-490F-8777-E70DB0DDA700}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{40EB30CF-A980-4DC0-9B2A-7751EE790112}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40EB30CF-A980-4DC0-9B2A-7751EE790112}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40EB30CF-A980-4DC0-9B2A-7751EE790112}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BD8D3F4-1F1D-490F-8777-E70DB0DDA700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD8D3F4-1F1D-490F-8777-E70DB0DDA700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD8D3F4-1F1D-490F-8777-E70DB0DDA700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD8D3F4-1F1D-490F-8777-E70DB0DDA700}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
