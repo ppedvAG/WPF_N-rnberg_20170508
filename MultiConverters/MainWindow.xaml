@@ -1,0 +1,77 @@
+﻿<Window x:Class="MultiConverters.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultiConverters"
+        xmlns:converters="clr-namespace:MultiConverters.Converters"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="525">
+    <StackPanel Margin="20">
+        <Grid Height="300"
+              Width="{Binding RelativeSource={RelativeSource Self}, Path=Height}">
+            <Rectangle Height="150" VerticalAlignment="Center"
+                       Fill="Black" />
+
+            <Rectangle Name="ColorRectangle">
+                <Rectangle.Resources>
+                    <converters:RgbToBrushConverter x:Key="rbg2BrushConverter" />
+                </Rectangle.Resources>
+                <Rectangle.Fill>
+                    <MultiBinding Converter="{StaticResource rbg2BrushConverter}"
+                                  Mode="TwoWay">
+                        <Binding Mode="TwoWay" ElementName="AlphaSlider" Path="Value" />
+                        <Binding Mode="TwoWay" ElementName="RedSlider" Path="Value" />
+                        <Binding Mode="TwoWay" ElementName="GreenSlider" Path="Value" />
+                        <Binding Mode="TwoWay" ElementName="BlueSlider" Path="Value" />
+                    </MultiBinding>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <StackPanel.Resources>
+                <Style TargetType="Slider">
+                    <Setter Property="Height" Value="200" />
+                    <Setter Property="Minimum" Value="0" />
+                    <Setter Property="Maximum" Value="255" />
+                    <Setter Property="Orientation" Value="Vertical" />
+                </Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="HorizontalAlignment" Value="Center" />
+                    <Setter Property="Margin" Value="0 4 0 0" />
+                </Style>
+                <Style TargetType="StackPanel">
+                    <Setter Property="Margin" Value="5" />
+                </Style>
+            </StackPanel.Resources>
+
+            <StackPanel>
+                <Slider Name="AlphaSlider" Value="255" />
+                <TextBlock Text="A" />
+            </StackPanel>
+            
+            <StackPanel>
+                <Slider Name="RedSlider" />
+                <TextBlock Text="R" />
+            </StackPanel>
+
+            <StackPanel>
+                <Slider Name="GreenSlider" />
+                <TextBlock Text="G" />
+            </StackPanel>
+
+            <StackPanel>
+                <Slider Name="BlueSlider" />
+                <TextBlock Text="B" />
+            </StackPanel>
+        </StackPanel>
+
+        <TextBox Margin="0 8 0 0" 
+                 Text="{Binding ElementName=ColorRectangle, Path=Fill, UpdateSourceTrigger=PropertyChanged, Delay=450}"
+                 HorizontalContentAlignment="Center"
+                 Width="180"
+                 Foreground="{Binding ElementName=ColorRectangle, Path=Fill}"/>
+    </StackPanel>
+</Window>
