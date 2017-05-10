@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertersExample", "Conver
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiConverters", "MultiConverters\MultiConverters.csproj", "{51A07085-1A34-4DEE-AD3B-FAD3676B2D1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyTrigger", "PropertyTrigger\PropertyTrigger.csproj", "{CDB8C64C-4393-4AD0-9D95-574597C39C67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{51A07085-1A34-4DEE-AD3B-FAD3676B2D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51A07085-1A34-4DEE-AD3B-FAD3676B2D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51A07085-1A34-4DEE-AD3B-FAD3676B2D1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDB8C64C-4393-4AD0-9D95-574597C39C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDB8C64C-4393-4AD0-9D95-574597C39C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDB8C64C-4393-4AD0-9D95-574597C39C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDB8C64C-4393-4AD0-9D95-574597C39C67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

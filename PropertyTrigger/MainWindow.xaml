@@ -1,0 +1,63 @@
+﻿<Window x:Class="PropertyTrigger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PropertyTrigger"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="4" />
+
+            <Style.Triggers>
+                <Trigger Property="Text" Value="Rot">
+                    <Setter Property="Background" Value="Red" />
+                </Trigger>
+
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Width" Value="180" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <system:Double x:Key="Image.Default.Height">150</system:Double>
+        <system:Double x:Key="Image.MouseOver.Height">200</system:Double>
+        <Style TargetType="Image">
+            <Setter Property="Height" Value="{StaticResource Image.Default.Height}" />
+            <Setter Property="Margin" Value="10" />
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <!--<Setter Property="Height" Value="200" />-->
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Height"
+                                                 To="{StaticResource Image.MouseOver.Height}"
+                                                 Duration="0:0:0.4" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Height"
+                                                 To="{StaticResource Image.Default.Height}"
+                                                 Duration="0:0:0.4" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <StackPanel Margin="50" Orientation="Horizontal">
+        <Image Source="lorempixel.jpg"  />
+        <Image Source="handy.jpg"  />
+        <Image Source="image.jpg"  />
+    </StackPanel>
+</Window>
