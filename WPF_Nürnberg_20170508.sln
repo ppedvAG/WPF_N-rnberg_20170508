@@ -43,6 +43,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventTriggerToFrameworkElem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation", "Validation\Validation.csproj", "{31CFAFF1-7FA0-4642-9645-BC2A99EDC483}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyProperties", "DependencyProperties\DependencyProperties.csproj", "{BDE4301E-D8B3-4ED3-AEC9-F269225DC5E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalloMVVM", "HalloMVVM\HalloMVVM.csproj", "{43E170F8-D64F-464B-B924-293F48B91386}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +133,14 @@ Global
 		{31CFAFF1-7FA0-4642-9645-BC2A99EDC483}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31CFAFF1-7FA0-4642-9645-BC2A99EDC483}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31CFAFF1-7FA0-4642-9645-BC2A99EDC483}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE4301E-D8B3-4ED3-AEC9-F269225DC5E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE4301E-D8B3-4ED3-AEC9-F269225DC5E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE4301E-D8B3-4ED3-AEC9-F269225DC5E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE4301E-D8B3-4ED3-AEC9-F269225DC5E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43E170F8-D64F-464B-B924-293F48B91386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43E170F8-D64F-464B-B924-293F48B91386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43E170F8-D64F-464B-B924-293F48B91386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43E170F8-D64F-464B-B924-293F48B91386}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
